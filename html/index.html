@@ -8,6 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
   <title>김주희의 포트폴리오</title>
+
   
   
   <link rel="stylesheet" type="text/css" href="../assets/css/themify-icons.css">
@@ -276,13 +277,22 @@
       <div class="row mt-4" >
         <div width="80%" style="margin: 0 auto; background-color: blueviolet; text-align: center;">
         <p class="text-center wow fadeInUp" style="margin-top: 2%; margin-bottom: 0;">프론트</p>
-        <div class="" style="display: inline-block;" width="10%">
-          <div class="card card-service wow fadeInUp">
-            <div class="icon">
+        <div class="" style="display: inline-block; " width="10%">
+          <div class="card card-service wow fadeInUp skils_icon">
+            <div class="icon" style="position: relative;">
               
               <span ><img src="../assets/img/SpringB.png" style="height: 60%; vertical-align: middle; display: inline-block;"></span>
 
             </div>
+
+            <!-- 마우스 오버시 보이는 이미지 -->
+            <div class="icon icon_hover" style="position: absolute; opacity: 0;">
+              
+              <span style="font-size: 50%;">아잉</span>
+
+            </div>
+            <!-- // -->
+
             
           </div>
         </div>
@@ -774,9 +784,12 @@
 
     <script type="text/javascript">
     $('document').ready(function(){
-      $('#kimkim').hover(function(){
-          alert('안녕');
-      });
+      $('.skils_icon').hover(function(){
+          $(this).children('.icon_hover').animate({opacity:"1"},400);
+      }, function () {
+          $(this).children('.icon_hover').animate({opacity:"0"},400);
+          });
+      
     });
 
   </script>
