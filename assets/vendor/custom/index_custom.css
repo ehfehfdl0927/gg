@@ -1,0 +1,12 @@
+.basic_div{
+    position: relative;
+}
+.basic_div > span img{
+    height: 60%; 
+    vertical-align: middle; 
+    display: inline-block;
+}
+.icon_hover{
+    position: absolute; 
+    opacity: 0;
+}
